@@ -23,11 +23,11 @@ const Header = (props: Props) => {
                          </Link>
                     ))}
                 </nav>
-                <nav className={styles.sub_nav}>
+                <div className={styles.sub_nav}>
                     <Link href="#"><i className="fas fa-search sub-nav-logo" /></Link>
                     <Link href="#"><i className="fas fa-bell sub-nav-logo" /></Link>
                     <Link href="#">Account</Link>
-                </nav>
+                </div>
             </header>
 
         </div>
