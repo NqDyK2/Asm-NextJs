@@ -9,6 +9,16 @@
       "email": "buitoai2031@gmaAil.com",
       "password": "$2a$10$kNUwvcD3BL2y8TZS/OILb./Q0XgW92uZpndlHJ617ZWX022VY3Ccu",
       "id": 6
+    },
+    {
+      "email": "123@gmail.com",
+      "password": "$2a$10$T.EOzJX4NdPVioTi8K.D4u9yv1E4c7pJSCFX80AUDgWEnJ9QDs3Y6",
+      "id": 7
+    },
+    {
+      "email": "abcd@gmail.com",
+      "password": "$2a$10$/JbimPISDSU.Ih0BLy47K.gZf/kBffxVQxiHdsJjxRS0HLTmCDCvO",
+      "id": 8
     }
   ]
 }
