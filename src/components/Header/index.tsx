@@ -17,8 +17,8 @@ const Header = (props: Props) => {
                     </Link>
                 </div>
                 <nav className={styles.main_nav}>
-                    {MenuList.map ((menu) =>(
-                        <Link className={styles.Link} href= {menu.path}> 
+                    {MenuList.map ((menu,index) =>(
+                        <Link key={index} className={styles.Link} href= {menu.path}> 
                             <a className={styles.aLink}>
                                 {menu.label}
                             </a>

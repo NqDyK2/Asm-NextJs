@@ -13,19 +13,19 @@
 }
 .item_number{
     display: flex;
-    background: rgb(49, 49, 49);
     justify-items: flex-end;
     position: absolute;
     top: 0
   }
   .number span{
     position:  relative;
-    font-size: 240px;
+    font-size: 220px;
     font-weight: 700;
-    top: 0rem;
+    top: -4rem;
     font-family: 'Oswald', sans-serif;
-    text-shadow:  2px 0 white, -2px 0 white, 0 2px white, 0 -2px white,
-                 1px 1px white, -1px -1px white, 1px -1px white, -1px 1px white;
+    color: black;
+     text-shadow:  2px 0 var(--dark), -2px 0 var(--dark), 0 2px var(--dark), 0 -2px var(--dark),
+                 1px 1px var(--dark), -1px -1px var(--dark), 1px -1px var(--dark), -1px 1px var(--dark); 
     
   }
   .item {
@@ -35,12 +35,9 @@
     transition: transform 500ms;
   }
   .item img {
-    max-width: 100%;
-    width: 180px;
-    height: 178px;
     object-fit: cover;
     position: relative;
-    top: 2.9rem;
+    top: 0rem;
     right: 2.5rem;
   }
   .item-number .item:focus,
