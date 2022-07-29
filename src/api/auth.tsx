@@ -4,6 +4,6 @@ export const SignUp = (user:any) => {
     return instance.post(url, user)
 }
 export const Signin = (user:any) => {
-    const url = '/login'
+    const url = '/signin'
     return instance.post(url, user)
 }

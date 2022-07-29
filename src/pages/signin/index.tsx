@@ -15,9 +15,8 @@ const signIn = () => {
     const {register, handleSubmit} = useForm<Input>()
     const success = () => toast.success("Bạn đã đăng nhập thành công!");
     const onSubmit:SubmitHandler<Input> = async (dataForm:any) => {
-          const {data:user} = await Signin(dataForm);
-          localStorage.setItem('user', JSON.stringify(user))
-       
+      const {data:user} = await Signin(dataForm);
+      localStorage.setItem('user', JSON.stringify(user))
     }
     
     return (
