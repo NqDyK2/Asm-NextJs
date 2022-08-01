@@ -30,7 +30,7 @@ const signIn = () => {
           objectFit="cover">
             
           </Image>
-          <img src="https://rb.gy/ulxxee" className="absolute lef-4top-4cursor-pointer object-contain md:left-10 md:top-6" width={150}  height={150}/>
+          {/* <img src="https://rb.gy/ulxxee" className="absolute lef-4top-4cursor-pointer object-contain md:left-10 md:top-6" width={150}  height={150}/> */}
             
             
             <form onSubmit={handleSubmit(onSubmit)} className="relative mt-24 space-y-8rounded bg-black/75 py-10 px-6md:mt-0
@@ -40,13 +40,13 @@ const signIn = () => {
                 
               <div className="space-y-4">
                 <label>
-                  <input type="email"placeholder="Email"{...register('email')} className='w-full rounded bg-[#333333] px-5 py-3.5 placeholder-[gray] outline-none focus:bg-[#454545];'/>
+                  <input type="email"placeholder="Email"{...register('email')} className='w-full rounded bg-[#333333] px-5 py-3.5 placeholder-[gray] outline-none text-white focus:bg-[#454545];'/>
                 </label>
                 <label>
-                  <input type="password"placeholder="Password"{...register('password')} className='w-full rounded bg-[#333333] mt-5 px-5 py-3.5 placeholder-[gray] outline-none focus:bg-[#454545];'/>
+                  <input type="password"placeholder="Password"{...register('password')} className='w-full rounded bg-[#333333] mt-5 px-5 py-3.5 placeholder-[gray] text-white outline-none focus:bg-[#454545];'/>
                 </label>
               </div>
-              <button type='submit' className='w-full rounded bg-[#e50914] mt-5 py-3 font-semibold'>Sign In</button>
+              <button type='submit' className='w-full rounded bg-[#e50914] mt-5 py-3 font-semibold text-white'>Sign In</button>
             <ToastContainer/>
 
     
