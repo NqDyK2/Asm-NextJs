@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Header from '../../components/Header'
+import List10Film from '../../components/list10film'
 
 import styles from './deltail.module.css'
 type Props = {}
@@ -55,6 +56,7 @@ const ProductPage = (props: Props) => {
 
 
           </div>
+          <List10Film/>
         </div>
 
       </div>
