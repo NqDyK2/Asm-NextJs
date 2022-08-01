@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import React from 'react'
-import Banner from '../banner'
 import styles from './header.module.css'
 
 import {MenuList} from './data-menu'
@@ -28,7 +27,8 @@ const Header = (props: Props) => {
                 <div className={styles.sub_nav}>
                     <Link href="#"><i className="fas fa-search sub-nav-logo" /></Link>
                     <Link href="#"><i className="fas fa-bell sub-nav-logo" /></Link>
-                    <Link href="#">Account</Link>
+                    <Link href="/signin"><button className='text-white py-2 px-5 mx-3 border rounded-lg border-white hover:border-red-500'>Login</button></Link>
+                    {/* <Link href="/signup"><button className='text-white mx-3 border border-red-500	bg-red-500 py-2 px-5 mx-3 rounded-lg hover:bg-white hover:text-black hover:border-white'>Register</button></Link> */}
                 </div>
             </header>
 
