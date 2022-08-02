@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { Signin } from '@/api/auth'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import { useRouter } from 'next/router'
 
 interface Input {
   email: String,
@@ -13,10 +14,12 @@ interface Input {
 }
 const signIn = () => {
   const { register, handleSubmit } = useForm<Input>()
+  const router = useRouter()
   const success = () => toast.success("Bạn đã đăng nhập thành công!");
   const onSubmit: SubmitHandler<Input> = async (dataForm: any) => {
     const { data: user } = await Signin(dataForm);
     localStorage.setItem('user', JSON.stringify(user))
+    router.push("/")
   }
 
   return (
