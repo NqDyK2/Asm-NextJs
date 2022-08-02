@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { SignUp } from '../../api/auth'
 import isEmpty from "validator/lib/isEmpty"
+import { useRouter } from 'next/router'
 
 
 interface Input {
@@ -14,9 +15,11 @@ interface Input {
 const Signup = () => {
 
   const { register, handleSubmit } = useForm<Input>()
+  const router = useRouter()
   const onSubmit: SubmitHandler<Input> = data => {
     console.log(data);
     SignUp(data)
+    router.push("/signin")
   }
   return (
     <div className='bg-black relative flex h-screen w-screen flex-col md:items-center md:justify-center '>
