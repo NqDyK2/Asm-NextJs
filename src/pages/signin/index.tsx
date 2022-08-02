@@ -42,7 +42,7 @@ const signIn = () => {
                 <label>
                   <input type="email"placeholder="Email"{...register('email', {required:true})} className='w-full rounded bg-[#333333] px-5 py-3.5 placeholder-[gray] outline-none focus:bg-[#454545];'/>
                 </label>
-                {errors.email?.type === 'required' && <li className='text-white'></li>}
+                {errors.email?.type === 'required' && <li className='text-white'>{email()}</li>}
 
                 <label>
                   <input type="password"placeholder="Password"{...register('password', {required: true})} className='w-full rounded bg-[#333333] mt-5 px-5 py-3.5 placeholder-[gray] outline-none focus:bg-[#454545];'/>
