@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import React from 'react'
-import Banner from '../banner'
 import styles from './header.module.css'
 
 import {MenuList} from './data-menu'
