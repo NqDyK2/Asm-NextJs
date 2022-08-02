@@ -1,0 +1,12 @@
+.btn_play{
+    background: var(--light);
+    padding: 13px 50px;
+    color: var(--primary);
+    border-radius: 4px;
+    font-weight: 600; 
+  }
+  .btn_play:hover{
+    color:var(--light);
+    background: red;
+    transition-duration: 0.3s ;
+  }
