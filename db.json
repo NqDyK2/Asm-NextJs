@@ -20,5 +20,33 @@
       "password": "$2a$10$/JbimPISDSU.Ih0BLy47K.gZf/kBffxVQxiHdsJjxRS0HLTmCDCvO",
       "id": 8
     }
+  ],
+  "film": [
+    {
+      "id": 507086, 
+      "original_language": "en",
+      "original_title": "Jurassic World Dominion",
+      "overview": "Four years after Isla Nublar was destroyed, dinosaurs now live—and hunt—alongside humans all over the world. This fragile balance will reshape the future and determine, once and for all, whether human beings are to remain the apex predators on a planet they now share with history’s most fearsome creatures.",
+      "popularity": 6380.612,
+      "poster_path": "https://cdnmedia.baotintuc.vn/Upload/a7srThwxbojBCucvUWgnxA/files/2022/06/13/khung-long-13062022.jpg",
+      "release_date": "2022-06-01",
+      "title": "Jurassic World Dominion",
+      "video": false,
+      "vote_average": 7.1,
+      "vote_count": 2382
+    },
+    {
+      "id": 438148,
+      "original_language": "en",
+      "original_title": "Minions: The Rise of Gru",
+      "overview": "A fanboy of a supervillain supergroup known as the Vicious 6, Gru hatches a plan to become evil enough to join them, with the backup of his followers, the Minions.",
+      "popularity": 6979.538,
+      "poster_path": "https://cdn.galaxycine.vn/media/2022/6/14/1200wx1800h_1655176495829.jpg",
+      "release_date": "2022-06-29",
+      "title": "Minions: The Rise of Gru",
+      "video": false,
+      "vote_average": 7.7,
+      "vote_count": 677
+    }
   ]
 }
