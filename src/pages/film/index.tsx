@@ -1,10 +1,11 @@
 import Link from 'next/link'
 import React from 'react'
-
+import styles from './detail.module.css'
 type Props = {}
 
-const index = (props: Props) => {
+const AllFilm = (props: Props) => {
   return (
+
     <>
       <div className='grid grid-cols-4 gap-5 max-w-screen-lg	mx-auto my-5 p-auto'>
         <Link href={"/film/1"}>
@@ -122,4 +123,4 @@ const index = (props: Props) => {
   )
 }
 
-export default index
+export default AllFilm
