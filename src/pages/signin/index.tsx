@@ -21,6 +21,8 @@ const signIn = () => {
       localStorage.setItem('user', JSON.stringify(user))
     }
     return (
+      <div>
+        <form>
         <div className='bg-black relative flex h-screen w-screen flex-col md:items-center md:justify-center '>
           <Head>
             <title>Netflix</title>
@@ -30,7 +32,7 @@ const signIn = () => {
           className="-z-10!hidden opacity-60 sm:!inline"
           objectFit="cover">
           </Image>
-          <img src="https://rb.gy/ulxxee" className="absolute lef-4top-4cursor-pointer object-contain md:left-10 md:top-6" width={150}  height={150}/>
+          {/* <img src="https://rb.gy/ulxxee" className="absolute lef-4top-4cursor-pointer object-contain md:left-10 md:top-6" width={150}  height={150}/> */}
             <form onSubmit={handleSubmit(onSubmit)} className="relative mt-24 space-y-8rounded bg-black/75 py-10 px-6md:mt-0
               md:max-w-md md:px-14">
               <h1 className='text-center mb-5 text-white text-3xl'>Sign In</h1>
