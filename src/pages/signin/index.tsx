@@ -15,6 +15,8 @@ const signIn = () => {
     const {register, handleSubmit, formState:{errors}} = useForm<Input>()
     const success = () => toast.success("Bạn đã đăng nhập thành công!");
     const email = () => toast.error("Email is required")
+    const password = () => toast.error("Password is required")
+
     const onSubmit:SubmitHandler<Input> = async (dataForm:any) => {
       const {data:user} = await Signin(dataForm);
       localStorage.setItem('user', JSON.stringify(user))
@@ -42,17 +44,19 @@ const signIn = () => {
                 <label>
                   <input type="email"placeholder="Email"{...register('email', {required:true})} className='w-full rounded bg-[#333333] px-5 py-3.5 placeholder-[gray] outline-none focus:bg-[#454545];'/>
                 </label>
-                {errors.email?.type === 'required' && <li className='text-white'>{email()}</li>}
+                
 
                 <label>
                   <input type="password"placeholder="Password"{...register('password', {required: true})} className='w-full rounded bg-[#333333] mt-5 px-5 py-3.5 placeholder-[gray] outline-none focus:bg-[#454545];'/>
+                  
                 </label>
               </div>
               <button type='submit' className='w-full rounded bg-[#e50914] mt-5 py-3 font-semibold'>Sign In</button>
             <ToastContainer/> 
               {Object.keys(errors).length !== 0 && (
                 <div className='error-container'>
-                  
+                  {errors.email?.type === 'required' && <span className='text-white'></span>}
+                  {errors.email?.type === 'required' && <span className='text-white '>Email is required</span>}
                 </div>
               )
               }
