@@ -1,0 +1,5 @@
+.footer{
+    @apply text-center lg:text-left text-white;
+    background: var(--primary);
+    
+}
