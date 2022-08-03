@@ -3,16 +3,12 @@ import Head from 'next/head'
 import Image from 'next/image'
 import {useForm, SubmitHandler} from 'react-hook-form'
 import {SignUp} from '../../api/auth'
-import isEmpty from "validator/lib/isEmpty"
-
-
 interface Input{
   email: String,
   password: String
 }
 
 const Signup = () => {
-
   const {register, handleSubmit } = useForm<Input>()
   const onSubmit:SubmitHandler<Input> = data => {
     console.log(data);
