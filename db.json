@@ -1,24 +1,63 @@
 {
+  "film":[
+    {
+      "name":"VUA HẢI TẶC: THANH KIẾM BỊ NGUYỀN RỦA",
+      "enName":"One Piece Cursed Holy Sword One Piece: Norowareta Seiken (Movie 5) (2004)",
+      "poster":"https://2phimmoi.net/wp-content/uploads/2022/08/vua-hai-tac-thanh-kiem-bi-nguyen-rua-93906-thumbnail.jpg",
+      "cast":"Lồng tiếng: Luffy - Mayumi Tanaka, Zoro - Kazuya Nakai, Nami - Akemi Okamura, Usopp - Kappei Yamaguchi,....",
+      "desc":"Vì sự truy đuổi của hải quân, Rufu và nhóm của anh đã đến đảo Aska trên đường trốn thoát. Nami nghe nói rằng có một Thất tinh kiếm trên hòn đảo này. Cô luôn muốn được tận mắt nhìn thấy vẻ đẹp của Thất Tinh Kiếm. Sauron biến mất sau khi nhìn thấy một con dao đã được bắn vào mình. Trong khi băng hải tặc Mũ Rơm đang tìm kiếm Sauron, họ đã gặp một cô gái tên Maya đang giữ ba viên đá quý. Họ đã nghe về bảy ngôi sao huyền thoại. Đằng sau thanh kiếm, có một truyền thuyết chưa được biết đến. Người được điều khiển bởi thanh kiếm bảy sao này là Saka, đồng minh trẻ tuổi của Sauron. Để cứu Saka, Sauron đã quyết định cắt bỏ vận đỏ đáng ngại trên đảo. Mặt trăng ...",
+      "backgroundImg":"https://ecdn.game4v.com/g4v-content/uploads/2021/10/14220015/OP-anime-1000-1-game4v-1634223615-75.jpg",
+      "vid": "https://www.youtube.com/embed/VH1CbMmMGdY"
+    }
+  ],
   "users": [
     {
       "email": "admin23@gmail.com",
+      "name":"Khoa Moi",
       "password": "$2a$10$cD.mx6nEL/7DeOcGaWtMtOX6GTpaYGukRIPk5A/rqcq1UQCnJ0HoO",
       "id": 5
     },
     {
       "email": "buitoai2031@gmaAil.com",
+      "name": "Bùi Toại",
       "password": "$2a$10$kNUwvcD3BL2y8TZS/OILb./Q0XgW92uZpndlHJ617ZWX022VY3Ccu",
       "id": 6
     },
     {
       "email": "123@gmail.com",
+      "name":"Xuân Nam",
       "password": "$2a$10$T.EOzJX4NdPVioTi8K.D4u9yv1E4c7pJSCFX80AUDgWEnJ9QDs3Y6",
       "id": 7
     },
     {
       "email": "abcd@gmail.com",
+      "name": "Nguyễn Duy ABC",
       "password": "$2a$10$/JbimPISDSU.Ih0BLy47K.gZf/kBffxVQxiHdsJjxRS0HLTmCDCvO",
       "id": 8
+    },
+    {
+      "email": "dyy@gmail.com",
+      "name": "Quý Duy",
+      "password": "$2a$10$bVfmIYSLqf1cC3672kh3iOifmCm/L/1btgHfERpm5a/Ayy/yziayC",
+      "id": 9
+    },
+    {
+      "email": "dyy123@gmail.com",
+      "name": "Nguyễn Quý Duy",
+      "password": "$2a$10$orTP4x1uEWEdu0s5T5icXuuGSOLs6cKHeVO5Arn59PWVO25Um0MbG",
+      "id": 10
+    },
+    {
+      "email": "dyy1234@gmail.com",
+      "name": "Nguyễn Duy",
+      "password": "$2a$10$yIiBJM9CCaDHkVR.OtEFjOkG0Cfyiuvtp1bqmg2y9tvqGWDK9d/Im",
+      "id": 11
+    },
+    {
+      "email": "nqdy0110@gmail.com",
+      "name": "Nguyễn Duy",
+      "password": "$2a$10$6hsitGkzqxKR1XMJNuK//erifswAkHGoGueYMMXx6Ca41uqvb74wK",
+      "id": 12
     }
   ],
   "film": [

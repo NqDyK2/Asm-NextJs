@@ -1,17 +1,19 @@
 import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import {useForm, SubmitHandler} from 'react-hook-form'
-import { useNavigate } from 'react-router-dom'
+import { useForm, SubmitHandler } from 'react-hook-form'
+import Link from 'next/link'
 import { Signin } from '@/api/auth'
-import {ToastContainer, toast} from 'react-toastify'
+import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import { useRouter } from 'next/router'
 
 interface Input {
-    email: String,
-    password: String
+  email: String,
+  password: String
 }
 const signIn = () => {
+
     const {register, handleSubmit, formState:{errors}} = useForm<Input>()
     const success = () => toast.success("Bạn đã đăng nhập thành công!");
     const email = () => toast.error("Email is required")
@@ -69,8 +71,11 @@ const signIn = () => {
               </button>
             </div>
             </form>
+
         </div>
-      )
+      </form>
+    </div>
+  )
 }
 
 export default signIn
