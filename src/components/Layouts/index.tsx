@@ -8,7 +8,7 @@ type Props = {}
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div>
+    <div className='bg-black' >
       <Header />
       <div>
         {children}
