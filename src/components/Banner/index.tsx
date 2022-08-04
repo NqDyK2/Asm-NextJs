@@ -1,24 +1,25 @@
 import React from 'react'
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
-
 import styles from './banner.module.css'
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-type Props = {}
+import useFilms from '@/hooks/use-film';
 
-const Banner = (props: Props) => {
+const Banner = () => {
+  const { data: films, error } = useFilms();
+  if (error) return <div>failed to load...</div>
+  if (!films) return <div> loading...</div>
   return (
     <div>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 2500,
+        //   disableOnInteraction: false,
+        // }}
         pagination={{
           clickable: true,
         }}
@@ -26,37 +27,27 @@ const Banner = (props: Props) => {
         modules={[Autoplay, Pagination, Navigation]}
         className={styles.mySwiper}
       >
-
-        <SwiperSlide className={styles.swiper_slide}>
-          <div className={styles.item_banner}>
-            <div className={styles.item}>
-              <div className={styles.desc}>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s,
-                </p>
-              </div>
-              <div className={styles.btn_handle_play}>
-                <button className={styles.btn_play}>Phát</button>
-                <button className={styles.btn_info}>Thông tin khác</button>
+        {films.map((item: any, index:any) => {
+            return<SwiperSlide className={styles.swiper_slide}>
+             <div key={index} className={styles.item_banner}>
+              <div className={styles.item}>
+                <div className={styles.desc}>
+                  <h1 className='text-white font-bold text-5xl py-4 '>{item.name}</h1>
+                  <p>
+                    {item.overview}
+                  </p>
+                </div>
+                <div className={styles.btn_handle_play}>
+                  <button className={styles.btn_play}> Phát</button>
+                  <button className={styles.btn_info} >Thông tin khác</button>
+                </div>
               </div>
             </div>
-          </div>
-          <img src="https://rare-gallery.com/thumbnail/44781-Po-Kung-Fu-PandaKung-Fu-Panda-3-HD-Wallpaper.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide className={styles.swiper_slide}>
-          <img src="https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide className={styles.swiper_slide}>
-          <img src="https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide className={styles.swiper_slide}>
-          <img src="https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide className={styles.swiper_slide}>
-          <img src="https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide className={styles.swiper_slide}>
-          <img src="https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide className={styles.swiper_slide}>
-          <img src="https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide className={styles.swiper_slide}>
-          <img src="https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg" alt="" /></SwiperSlide>
+              <img src={item.banner_img} alt="" />
+          </SwiperSlide>
+          })}
       </Swiper >
+
     </div >
   )
 }
