@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import React from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
@@ -11,6 +12,8 @@ const Banner = () => {
   const { data: films, error } = useFilms();
   if (error) return <div>failed to load...</div>
   if (!films) return <div> loading...</div>
+  console.log("data", films);
+  
   return (
     <div>
       <Swiper
