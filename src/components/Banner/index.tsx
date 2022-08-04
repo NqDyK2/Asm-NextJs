@@ -11,20 +11,15 @@ const Banner = () => {
   const { data: films, error } = useFilms();
   if (error) return <div>failed to load...</div>
   if (!films) return <div> loading...</div>
-  console.log('films', films);
-  // Object.values(data).map((x) => console.log(x))
   return (
     <div>
-      {/* {films.map((item: any) => {
-        return <div key={item.id}><li>{item.name}</li></div>
-      })} */}
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 2500,
+        //   disableOnInteraction: false,
+        // }}
         pagination={{
           clickable: true,
         }}
@@ -37,6 +32,7 @@ const Banner = () => {
              <div key={index} className={styles.item_banner}>
               <div className={styles.item}>
                 <div className={styles.desc}>
+                  <h1 className='text-white font-bold text-5xl py-4 '>{item.name}</h1>
                   <p>
                     {item.overview}
                   </p>
@@ -47,24 +43,9 @@ const Banner = () => {
                 </div>
               </div>
             </div>
-              <img src={item.poster_path} alt="" />
-
+              <img src={item.banner_img} alt="" />
           </SwiperSlide>
           })}
-        {/* <SwiperSlide className={styles.swiper_slide}>
-          <img src="https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide className={styles.swiper_slide}>
-          <img src="https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide className={styles.swiper_slide}>
-          <img src="https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide className={styles.swiper_slide}>
-          <img src="https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide className={styles.swiper_slide}>
-          <img src="https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide className={styles.swiper_slide}>
-          <img src="https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide className={styles.swiper_slide}>
-          <img src="https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg" alt="" /></SwiperSlide> */}
       </Swiper >
 
     </div >
