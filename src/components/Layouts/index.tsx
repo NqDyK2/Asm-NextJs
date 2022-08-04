@@ -1,7 +1,7 @@
 import React from 'react'
 import { LayoutProps } from '../../models/layouts'
 import Footer from '../footer'
-import Header from '../header'
+import Header from '../Header'
 
 
 type Props = {}
