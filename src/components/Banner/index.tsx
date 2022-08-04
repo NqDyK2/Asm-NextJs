@@ -1,17 +1,23 @@
 import React from 'react'
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
-
 import styles from './banner.module.css'
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-type Props = {}
+import useFilms from '@/hooks/use-film';
 
-const Banner = (props: Props) => {
+const Banner = () => {
+  const { data:films, error } = useFilms();
+  if (error) return <div>failed to load...</div>
+  if (!films) return <div> loading...</div>
+  console.log('films', films);
+  // Object.values(data).map((x) => console.log(x))
   return (
     <div>
+      { films.map((item:any) => {
+        return <div key={item.id}><li>{item.name}</li></div>
+      })}
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -26,7 +32,6 @@ const Banner = (props: Props) => {
         modules={[Autoplay, Pagination, Navigation]}
         className={styles.mySwiper}
       >
-
         <SwiperSlide className={styles.swiper_slide}>
           <div className={styles.item_banner}>
             <div className={styles.item}>
@@ -36,13 +41,15 @@ const Banner = (props: Props) => {
                 </p>
               </div>
               <div className={styles.btn_handle_play}>
-                <button className={styles.btn_play}>Phát</button>
-                <button className={styles.btn_info}>Thông tin khác</button>
+                <button className={styles.btn_play}> Phát</button>
+                <button className={styles.btn_info} >Thông tin khác</button>
               </div>
             </div>
           </div>
-          <img src="https://rare-gallery.com/thumbnail/44781-Po-Kung-Fu-PandaKung-Fu-Panda-3-HD-Wallpaper.jpg" alt="" /></SwiperSlide>
-        <SwiperSlide className={styles.swiper_slide}>
+          <img src="https://rare-gallery.com/thumbnail/44781-Po-Kung-Fu-PandaKung-Fu-Panda-3-HD-Wallpaper.jpg" alt="" />
+        </SwiperSlide>
+
+        {/* <SwiperSlide className={styles.swiper_slide}>
           <img src="https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg" alt="" /></SwiperSlide>
         <SwiperSlide className={styles.swiper_slide}>
           <img src="https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg" alt="" /></SwiperSlide>
@@ -55,8 +62,9 @@ const Banner = (props: Props) => {
         <SwiperSlide className={styles.swiper_slide}>
           <img src="https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg" alt="" /></SwiperSlide>
         <SwiperSlide className={styles.swiper_slide}>
-          <img src="https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg" alt="" /></SwiperSlide>
+          <img src="https://user-images.githubusercontent.com/33485020/108069438-5ee79d80-7089-11eb-8264-08fdda7e0d11.jpg" alt="" /></SwiperSlide> */}
       </Swiper >
+
     </div >
   )
 }
