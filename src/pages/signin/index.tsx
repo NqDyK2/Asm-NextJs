@@ -46,7 +46,6 @@ const signIn = () => {
                   <input type="email"placeholder="Email"{...register('email')} className='w-full rounded bg-[#333333] px-5 py-3.5 placeholder-[gray] outline-none focus:bg-[#454545];'/>
                 </label>
                 <label>
-                  <input type="password"placeholder="Password"{...register('password')} className='w-full rounded bg-[#333333] mt-5 px-5 py-3.5 placeholder-[gray] outline-none focus:bg-[#454545];'/>
                   <input type="password"placeholder="Password"{...register('password', {required: true})} className='w-full rounded bg-[#333333] mt-5 px-5 py-3.5 placeholder-[gray] outline-none focus:bg-[#454545];'/>
                 </label>
               </div>

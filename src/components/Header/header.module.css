@@ -1,4 +1,4 @@
-.header {
+/* .header {
     padding: 20px 20px 30px 20px;
     display: grid;  
     grid-gap:5px;
@@ -8,12 +8,11 @@
     background-color: var(--primary);
     width: 100%;  
     margin-bottom: 0px;  
-     /* position:fixed;
+     position:fixed;
      z-index: 1;
-     top: 0; */
+     top: 0;
   }
   .netflixLogo {
-    grid-area: nt;
     object-fit: cover;
     width: 100px;
     max-height: 100%;
@@ -24,7 +23,7 @@
   .netflixLogo img {  
     height: 35px; 
     width: 116px;    
-  }
+  } */
   
   .logo {
     color: #fff;  
