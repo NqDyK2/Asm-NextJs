@@ -37,7 +37,7 @@ const ListFilm = (props: NextPageWithLayout) => {
                 backgroundImg
               </th>
               <th scope="col" className="py-3 px-6">
-
+                Action
               </th>
               <th scope="col" className="py-3 px-6">
 
@@ -45,9 +45,10 @@ const ListFilm = (props: NextPageWithLayout) => {
             </tr>
           </thead>
           <tbody>
-            <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
+            
               {films.map((item: any, index: any) => {
                 return <>
+                <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
                   <th scope="row" className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     {index + 1}
                   </th>
@@ -58,13 +59,13 @@ const ListFilm = (props: NextPageWithLayout) => {
                     {item.title}
                   </td>
                   <td className="py-4 px-6 ">
-                    <img src={item.poster_path} alt="" />
+                    <img src={item.poster_path} alt="" width="100px" />
                   </td>
                   <td className="py-4 px-6">
                     {/* {item.overview} */}
                   </td>
                   <td className="py-4 px-6">
-                    <img src={item.backgroundImg} alt="" />
+                    <img src={item.backgroundImg} alt="" width="100px" />
                   </td>
                   <td className="py-4 px-6 ">
                     <Link href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline mr-4">Edit</Link>
@@ -72,11 +73,14 @@ const ListFilm = (props: NextPageWithLayout) => {
                   <td className='py-4 px-6'>
                     <Link href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Delete</Link>
                   </td>
-                </>
+                
 
-              })}
+              
 
             </tr>
+            
+</>
+})}
 
           </tbody>
         </table>
