@@ -1,22 +1,25 @@
 import React from 'react'
-import { LayoutProps } from '../../models/layouts'
+import FooterAdmin from '../Admin/footer'
+import NavAdmin from '../Admin/sideBarAdmin'
 
 type Props = {}
 
-const LayoutAdmin = ({ children }: LayoutProps) => {
+const LayoutAdmin = ({ children }: any) => {
     return (
         <div>
-            <div className='grid grid-cols-[200px,auto]'>
+            <div className=''>
                 <div>
-                    Sidebar
+                    <NavAdmin/>
+                </div>
+                <div className='h-full'>
+                    {children}
                 </div>
                 <div>
-                    {children}
+                    <FooterAdmin/>
                 </div>
             </div>
 
         </div>
     )
 }
-
 export default LayoutAdmin
