@@ -1,5 +1,6 @@
 import { SWRConfig } from 'swr';
 import type { AppProps } from "next/app";
+import 'antd/dist/antd.css';
 import instance from '@/api/instance';
 import '../styles/globals.css'
 import { AppPropsWithLayout } from "../models/layouts";
