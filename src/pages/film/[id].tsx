@@ -1,13 +1,22 @@
 
 
+import { GetServerSideProps, GetServerSidePropsContext } from 'next'
+import { useRouter } from 'next/router'
 import React from 'react'
+import useSWR from 'swr'
 import List10Film from '../../components/list10film'
 
 import styles from './deltail.module.css'
-type Props = {}
+type ProductProps = {
+  product : any[]
+}
 
-const ProductPage = (props: Props) => {
-
+const ProductPage = (props: ProductProps ) => {
+const router = useRouter()
+const {id} = router.query
+const {data, error} = useSWR(id ? `/films/${id}` : null)
+if(!data) <div>loading...</div>
+if(error) <div> error</div>
 
 
   return (
@@ -17,18 +26,16 @@ const ProductPage = (props: Props) => {
 
         <div className={styles.content} >
           <div className={styles.item}>
-            <img src="http://res.cloudinary.com/dm6frgae8/image/upload/v1658850079/k1k35cwtokjakjzaex2c.jpg" alt="" width="100%" />
+          <img src={data?.poster_path} alt="" width="100%" />
             <div className={styles.content_item}>
-              <h2>IRON MAN</h2>
+              <h2>{data?.name}</h2>
               <div className={styles.deltal}>
-                <span><i className="fa-solid fa-calendar-days"> </i> 2019</span>
+                <span><i className="fa-solid fa-calendar-days"> </i> 2022</span>
                 <span className={styles.age}>16+</span>
                 <span><i className="fa-solid fa-clock" /> 1g30p</span>
               </div>
               <div className={styles.content_deltai}>
-                <p>Nội dung của Người Sắt xoay quanh Tony Stark, một kỹ nghệ gia kiêm kỹ sư thiên tài, sau khi trải
-                  qua một tai nạn nguy hiểm đến tính mạng đã chế tạo nên một bộ giáp siêu năng lực và trở thành
-                  Người Sắt, một siêu anh hùng với trang bị tân tiến.</p>
+                <p>{data?.overview}</p>
               </div>
               <div className={styles.deltail_play}>
                 <div className={styles.play}>
@@ -40,15 +47,14 @@ const ProductPage = (props: Props) => {
               </div>
               <div className={styles.story}>
                 <i className="fa-solid fa-store" />
-                <p>Anthony Edward  Stark, con trai của một nhà công nghiệp và người đứng đầu của Stark
-                  Industries, Ned Stark, và Maria Stark, được sinh ra ở Long Island. </p>
+                <p> {data?.story_cart} </p>
               </div>
               <div className={styles.cast_movie}>
                 <div className={styles.cast}>
-                  <p>Diễn viên chính : Robert Downey Jr, Darkly, Gothika, Downey, Zodiac</p>
+                  <p>Diễn viên chính : {data?.cast}</p>
                 </div>
                 <div className={styles.movie}>
-                  <p>Thể loại : Phim siêu anh hùng, hành động phưu lưu, phim của Mỹ</p>
+                  <p>Ngày ra mắt : {data?.release_date}</p>
                 </div>
               </div>
             </div>
@@ -62,6 +68,14 @@ const ProductPage = (props: Props) => {
 
     </div>
   )
+}
+export const getServerSideProps: GetServerSideProps = async(context: GetServerSidePropsContext) => {
+  const data = await ( await fetch(` http://localhost:3001/films/${context.params.id}`)).json()
+  return {
+    props : {
+      product : data
+    }
+  }
 }
 
 export default ProductPage
