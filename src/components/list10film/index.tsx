@@ -4,10 +4,18 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
-type Props = {}
+import useFilms from '@/hooks/use-film';
 import { Pagination, Navigation } from "swiper";
+import Link from 'next/link'
+type Props = {}
+
+
 const List10Film = (props: Props) => {
+    const {data: films, error} = useFilms()
+    if(!films ) return <div> loading...</div>
+    if(error) return <div>error</div>
+    console.log("film",films);
+    
     return (
         <div>
             <h2 className={styles.title}>Top 10 phim tại Việt Nam ngay hôm nay</h2>
@@ -23,114 +31,23 @@ const List10Film = (props: Props) => {
                 modules={[Pagination, Navigation]}
                 className={styles.mySwiper}
             >
-                <SwiperSlide className={styles.Swiper_slide}>
+                {films.slice(0,10).map((item: any , index:any) => {
+                
+             return <SwiperSlide className={styles.Swiper_slide} key={index}>
                     <div className={styles.item_number}>
-                        <div className={styles.number}>
+                        {/* <div className={styles.number}>
                             <span>1</span>
-                        </div>
+                        </div> */}
                         <div className={styles.item}>
-                            <a href="">
-                                <img src="https://i.ytimg.com/vi/TFJwUwnShnA/mqdefault.jpg" alt='#' />
-                            </a>
+                            <Link href={`film/${item.id}`}>
+                                <img src= {item.poster_path} alt='#' />
+                            </Link>
                         </div>
                     </div>
                 </SwiperSlide>
-                <SwiperSlide className={styles.Swiper_slide}>
-                    <div className={styles.item_number}>
-                        <div className={styles.number}>
-                            <span>2</span>
-                        </div>
-                        <div className={styles.item}>
-                            <a href="">
-                                <img src="https://i.ytimg.com/vi/TFJwUwnShnA/mqdefault.jpg" alt='#' />
-                            </a>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className={styles.Swiper_slide}>
-                    <div className={styles.item_number}>
-                        <div className={styles.number}>
-                            <span>3</span>
-                        </div>
-                        <div className={styles.item}>
-                            <a href="">
-                                <img src="https://i.ytimg.com/vi/TFJwUwnShnA/mqdefault.jpg" alt='#' />
-                            </a>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className={styles.Swiper_slide}>
-                    <div className={styles.item_number}>
-                        <div className={styles.number}>
-                            <span>4</span>
-                        </div>
-                        <div className={styles.item}>
-                            <a href="">
-                                <img src="https://i.ytimg.com/vi/TFJwUwnShnA/mqdefault.jpg" alt='#' />
-                            </a>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className={styles.Swiper_slide}>
-                    <div className={styles.item_number}>
-                        <div className={styles.number}>
-                            <span>5</span>
-                        </div>
-                        <div className={styles.item}>
-                            <a href="">
-                                <img src="https://i.ytimg.com/vi/TFJwUwnShnA/mqdefault.jpg" alt='#' />
-                            </a>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className={styles.Swiper_slide}>
-                    <div className={styles.item_number}>
-                        <div className={styles.number}>
-                            <span>6</span>
-                        </div>
-                        <div className={styles.item}>
-                            <a href="">
-                                <img src="https://i.ytimg.com/vi/TFJwUwnShnA/mqdefault.jpg" alt='#' />
-                            </a>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className={styles.Swiper_slide}>
-                    <div className={styles.item_number}>
-                        <div className={styles.number}>
-                            <span>7</span>
-                        </div>
-                        <div className={styles.item}>
-                            <a href="">
-                                <img src="https://i.ytimg.com/vi/TFJwUwnShnA/mqdefault.jpg" alt='#' />
-                            </a>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className={styles.Swiper_slide}>
-                    <div className={styles.item_number}>
-                        <div className={styles.number}>
-                            <span>8</span>
-                        </div>
-                        <div className={styles.item}>
-                            <a href="">
-                                <img src="https://i.ytimg.com/vi/TFJwUwnShnA/mqdefault.jpg" alt='#' />
-                            </a>
-                        </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide className={styles.Swiper_slide}>
-                    <div className={styles.item_number}>
-                        <div className={styles.number}>
-                            <span>9</span>
-                        </div>
-                        <div className={styles.item}>
-                            <a href="">
-                                <img src="https://i.ytimg.com/vi/TFJwUwnShnA/mqdefault.jpg" alt='#' />
-                            </a>
-                        </div>
-                    </div>
-                </SwiperSlide>
+                
+                })}
+                
 
                 <SwiperSlide className={styles.Swiper_slide}>
                     <img src="https://i.ytimg.com/vi/TFJwUwnShnA/mqdefault.jpg" alt='' />
