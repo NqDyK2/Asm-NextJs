@@ -23,3 +23,7 @@ export const paginate = (page:any) => {
     const url = `/films?_page=${page}&_limit=8`
     return instance.get(url) 
 }
+export const searchFilms = (search:any) => {
+    const url = `/films?q=${search}`
+    return instance.get(url)
+}   
