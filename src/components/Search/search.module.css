@@ -1,0 +1,18 @@
+.form_input{
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  padding-left: 15px;
+}
+
+.btn_play{
+    background: var(--light);
+    padding: 4px 19px;
+    color: var(--primary);
+    border-radius: 4px;
+  }
+  .btn_play:hover{
+    color:var(--light);
+    background: red;
+    transition-duration: 0.3s;
+  }
