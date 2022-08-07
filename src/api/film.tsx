@@ -12,6 +12,10 @@ export const deleteFilm = (id:any) => {
     return instance.delete(url)
 }
 export const updateFilm = (film:any) => {
-    const url = `/film/${film.id}`
+    const url = `/films/${film.id}`
     return instance.put(url, film)
+}
+export const paginate = (page:any) => {
+    const url = `/films?_page=${page}&_limit=4`
+    return instance.get(url) 
 }
