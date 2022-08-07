@@ -12,7 +12,6 @@ const Banner = () => {
   const { data: films, error } = useFilms();
   if (error) return <div>failed to load...</div>
   if (!films) return <div> loading...</div>
-  console.log("data", films);
   
   return (
     <div>
@@ -30,9 +29,9 @@ const Banner = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className={styles.mySwiper}
       >
-        {films.map((item: any, index:any) => {
-            return<SwiperSlide className={styles.swiper_slide}>
-             <div key={index} className={styles.item_banner}>
+        {films.slice(0,5).map((item: any, index:any) => {
+            return<SwiperSlide className={styles.swiper_slide} key={index}>
+             <div className={styles.item_banner}>
               <div className={styles.item}>
                 <div className={styles.desc}>
                   <h1 className='text-white font-bold text-5xl py-4 '>{item.name}</h1>
