@@ -50,7 +50,7 @@ const signIn = () => {
               {errors.password?.type === 'required' && <span className='text-red-800 '>*Password is required</span>}
             </label>
           </div>
-          <button type='submit' className='w-full rounded bg-[#e50914] mt-5 px-auto py-3 text-slate-50 font-semibold'>Sign In</button>
+          <button type='submit' className='w-full rounded bg-[#e50914] mt-5 px-auto py-3 text-slate-50 font-semibold hover:text-emerald-300'>Sign In</button>
 
           {Object.keys(errors).length !== 0 && (
             <div className='error-container'>
