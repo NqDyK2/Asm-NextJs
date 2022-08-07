@@ -16,14 +16,13 @@ const ListFilm = (props: NextPageWithLayout) => {
   return (
     <div>
       {/* test Antd */}
+      <Link href='/admin/films/add'>
       <Button  style={{color:'red'}} icon={<PlusCircleOutlined />} >Thêm Mới</Button>
+      </Link>
       <List
         itemLayout="vertical"
         size="large"
         pagination={{
-          onChange: (page) => {
-            console.log(page);
-          },
           pageSize: 3,
         }}
         dataSource={films}
@@ -50,7 +49,7 @@ const ListFilm = (props: NextPageWithLayout) => {
             {films.content}
           
             <Button icon={<ToolOutlined />}>
-            <Link href={`${films.id}/edit`}>Sửa</Link>
+            <Link href={`/admin/films/${films.id}/edit`}>Sửa</Link>
               </Button>
             <Button type="primary" danger style={{ marginLeft: 8 }} icon={<DeleteOutlined/>}  onClick= {()=> {if(window.confirm('bạn có muốn xóa ko')) {(films._id)}}}>
               Xóa

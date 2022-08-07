@@ -1,5 +1,4 @@
 {
-
   "film": [
     {
       "name": "VUA HẢI TẶC: THANH KIẾM BỊ NGUYỀN RỦA",
@@ -76,7 +75,7 @@
       "poster_path": "https://www.themoviedb.org/t/p/w500/mKFT6Q7PjrRLYuPLfmH4WLCXOiD.jpg",
       "release_date": "2022-02-18",
       "title": "The Ledge",
-      "banner_img":"https://cdn.flickeringmyth.com/wp-content/uploads/2022/01/The-Ledge-Signature-Entertainment-Banner.jpg",
+      "banner_img": "https://cdn.flickeringmyth.com/wp-content/uploads/2022/01/The-Ledge-Signature-Entertainment-Banner.jpg",
       "video": "https://www.youtube.com/embed/J5SPKIxBDGs",
       "vote_average": 6.3,
       "vote_count": 75
@@ -90,12 +89,11 @@
       "poster_path": "https://www.themoviedb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg",
       "release_date": "2022-05-04",
       "title": "Doctor Strange in the Multiverse of Madness",
-      "banner_img":"https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202205/10769_105_100012.jpg",
+      "banner_img": "https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202205/10769_105_100012.jpg",
       "video": "https://www.youtube.com/embed/3xccmeAsy8g",
       "vote_average": 7.5,
       "vote_count": 5082
     },
- 
     {
       "id": 728366,
       "name": "Borrego",
@@ -104,12 +102,11 @@
       "poster_path": "https://phim.didibkk.com/wp-content/uploads/2022/01/kPzQtr5LTheO0mBodIeAXHgthYX.jpg",
       "release_date": "2022-01-14",
       "title": "Borrego",
-      "banner_img":"https://zetfliks.vip/uploads/posts/2022-02/borrego_2022_lksajf.jpg",
+      "banner_img": "https://zetfliks.vip/uploads/posts/2022-02/borrego_2022_lksajf.jpg",
       "video": "https://www.youtube.com/embed/F4lYv5_02bg",
       "vote_average": 5.9,
       "vote_count": 34
     },
-   
     {
       "id": 718930,
       "original_language": "en",
@@ -119,7 +116,7 @@
       "poster_path": "https://posters-us.s3.us-west-2.amazonaws.com/CGVLOS/tVxDe01Zy3kZqaZRNiXFGDICdZk.jpg",
       "release_date": "2022-07-03",
       "title": "Bullet Train",
-      "banner_img":"https://www.bullettrainmovie.com/images/share.jpg",
+      "banner_img": "https://www.bullettrainmovie.com/images/share.jpg",
       "video": "https://www.youtube.com/embed/0IOsk2Vlc4o",
       "vote_average": 7.3,
       "vote_count": 88
@@ -132,7 +129,7 @@
       "poster_path": "https://www.themoviedb.org/t/p/w500/8cXbitsS6dWQ5gfMTZdorpAAzEH.jpg",
       "release_date": "2022-07-13",
       "title": "The Gray Man",
-      "banner_img":"http://static.ssphim.net/static/5fe2d564b3fa6403ffa11d1c/62d67c6f4657a79afd701370_banner-dac-vu-vo-hinh.jpeg",
+      "banner_img": "http://static.ssphim.net/static/5fe2d564b3fa6403ffa11d1c/62d67c6f4657a79afd701370_banner-dac-vu-vo-hinh.jpeg",
       "video": "https://www.youtube.com/embed/BmllggGO4pM",
       "vote_average": 7,
       "vote_count": 1267
@@ -145,7 +142,7 @@
       "poster_path": "https://www.themoviedb.org/t/p/original/qvqyDj34Uivokf4qIvK4bH0m0qF.jpg",
       "release_date": "2022-05-19",
       "title": "Last Seen Alive",
-      "banner_img":"https://movies.sterkinekor.co.za/CDN/media/entity/get/FilmTitleGraphic/HO00002449?referenceScheme=HeadOffice&allowPlaceHolder=true",
+      "banner_img": "https://movies.sterkinekor.co.za/CDN/media/entity/get/FilmTitleGraphic/HO00002449?referenceScheme=HeadOffice&allowPlaceHolder=true",
       "video": "https://www.youtube.com/embed/5Gutb4hc5r4",
       "vote_average": 6.5,
       "vote_count": 189
@@ -173,7 +170,7 @@
       "poster_path": "https://www.themoviedb.org/t/p/w500/tVbO8EAbegVtVkrl8wNhzoxS84N.jpg",
       "release_date": "2022-02-11",
       "title": "Indemnity",
-      "banner_img":"https://i.ytimg.com/vi/8L61wCveX2k/maxresdefault.jpg",
+      "banner_img": "https://i.ytimg.com/vi/8L61wCveX2k/maxresdefault.jpg",
       "video": "https://www.youtube.com/embed/kEeirDvFXLw",
       "vote_average": 6.8,
       "vote_count": 40
@@ -187,7 +184,7 @@
       "poster_path": "https://www.themoviedb.org/t/p/w500/bv9dy8mnwftdY2j6gG39gCfSFpV.jpg",
       "release_date": "2022-02-10",
       "title": "Blacklight",
-      "banner_img":"https://i.ytimg.com/vi/jY06DeZsPb4/maxresdefault.jpg",
+      "banner_img": "https://i.ytimg.com/vi/jY06DeZsPb4/maxresdefault.jpg",
       "video": "https://www.youtube.com/embed/PE04ESdgnHI",
       "vote_average": 6.3,
       "vote_count": 550
@@ -200,7 +197,7 @@
       "poster_path": "https://www.themoviedb.org/t/p/w500/b5ug4LyLQFeR6azAJyIPBQz5ur9.jpg",
       "release_date": "2022-03-24",
       "title": "Shut In",
-      "banner_img":"https://intoscreenscom.files.wordpress.com/2022/05/shut-in-signature-entertainment-banner.jpg?w=1568",
+      "banner_img": "https://intoscreenscom.files.wordpress.com/2022/05/shut-in-signature-entertainment-banner.jpg?w=1568",
       "video": "https://www.youtube.com/embed/D5RjpC7_pYU",
       "vote_average": 7.2,
       "vote_count": 153
@@ -219,7 +216,7 @@
       "vote_count": 1684
     },
     {
-      "id": 507086, 
+      "id": 507086,
       "name": "Jurassic World: Lãnh Địa",
       "overview": "Four years after Isla Nublar was destroyed, dinosaurs now live—and hunt—alongside humans all over the world. This fragile balance will reshape the future and determine, once and for all, whether human beings are to remain the apex predators on a planet they now share with history’s most fearsome creatures.",
       "cast": "Robert John Downey Ir,Darkly, Gothika, Zodiac",
@@ -228,7 +225,7 @@
       "banner_img": "https://photo-cms-nghenhinvietnam.zadn.vn/Uploaded/trunghieu/2022_06_12/UC7PLVWO25GSVAW2R5VTO6UZBU_RKFK.jpeg",
       "release_date": "2022-06-01",
       "title": "Jurassic World Dominion",
-      "video": "https://www.youtube.com/embed/cXKtVllKvgk" 
+      "video": "https://www.youtube.com/embed/cXKtVllKvgk"
     },
     {
       "id": 438148,
@@ -276,7 +273,7 @@
       "poster_path": "https://www.themoviedb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
       "release_date": "2021-12-15",
       "title": "Spider-Man: No Way Home",
-      "banner_img":"https://www.nerdevil.it/wp-content/uploads/2021/12/spider-man-no-way-home-recensione-nerdevil.jpg",
+      "banner_img": "https://www.nerdevil.it/wp-content/uploads/2021/12/spider-man-no-way-home-recensione-nerdevil.jpg",
       "video": "https://www.youtube.com/embed/JfVOs4VSpmA",
       "vote_average": 8,
       "vote_count": 14510
