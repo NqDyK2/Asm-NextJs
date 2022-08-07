@@ -12,7 +12,7 @@ const AllFilm = (props: Props) => {
   // if (!films) return <div> loading...</div>
   const [films, setFilms] = useState<any>([]);
   const [page, setPage] = useState(0);
-  const [totalP, setTotalP] = useState(2)
+  const [totalP, setTotalP] = useState(3)
   useEffect(() => {
     const getPagiFilms = async () => {
       const data = await paginate(page);
@@ -26,6 +26,7 @@ const AllFilm = (props: Props) => {
     setPage(index)
     console.log("Page",index);
   }
+
 
   return (
     <>
@@ -54,7 +55,7 @@ const AllFilm = (props: Props) => {
             </span>
           </li> */}
           {[...Array(totalP).keys()].map((item: any, index: any) => {
-            return <li> <span onClick={() => onChangePage(index)} className="flex text-indigo-700 hover:bg-indigo-600 hover:text-white text-base leading-tight font-bold cursor-pointer shadow transition duration-150 ease-in-out mx-2 sm:mx-4 rounded px-3 py-2 focus:outline-none">{item+1}</span> </li>
+            return <li> <span onClick={() => onChangePage(index)} className="flex text-indigo-700 hover:bg-indigo-600 hover:text-white text-base leading-tight font-bold cursor-pointer shadow transition duration-150 ease-in-out mx-2 sm:mx-4 rounded px-3 py-2 focus:outline-none">{item +1}</span> </li>
           })}
           {/* <li>
             <span className="flex text-indigo-700 hover:bg-indigo-600 hover:text-white text-base leading-tight font-bold cursor-pointer shadow transition duration-150 ease-in-out mx-2 sm:mx-4 rounded px-3 py-2 focus:outline-none">2</span>

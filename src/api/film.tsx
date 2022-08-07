@@ -16,6 +16,6 @@ export const updateFilm = (film:any) => {
     return instance.put(url, film)
 }
 export const paginate = (page:any) => {
-    const url = `/films?_page=${page}&_limit=4`
+    const url = `/films?_page=${page}&_limit=8`
     return instance.get(url) 
 }
