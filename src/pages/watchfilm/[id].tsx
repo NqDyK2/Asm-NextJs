@@ -18,11 +18,12 @@ const {data, error} = useSWR(id ? `/films/${id}` : null)
 if(!data) return <div>loading...</div>
 if(error) return <div> error</div>
 
+console.log(data.video);
 
   return (
    <div>
     <div>
-    <iframe width="100%" height="680px" src={data.video} title="Review The Black Phone (Điện Thoại Đen) | Liệu Có Thành Công Như IT ?" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+    <iframe width="100%" height="800px" src={data.video}  frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
     </div>
   <List10Film/>
    </div>
