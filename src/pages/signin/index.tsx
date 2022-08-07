@@ -2,11 +2,11 @@ import React from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import {useForm, SubmitHandler} from 'react-hook-form'
-import { useNavigate } from 'react-router-dom'
 import { Signin } from '@/api/auth'
 import {ToastContainer, toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
-
+import {Route} from 'react-router-dom'
+import { link } from 'fs'
 interface Input {
     email: String,
     password: String
@@ -18,7 +18,8 @@ const signIn = () => {
     const password = () => toast.error("Password is required")
 
     const onSubmit:SubmitHandler<Input> = async (dataForm:any) => {
-      const {data:user} = await Signin(dataForm);
+      let {data:user} = await Signin(dataForm);
+      
       localStorage.setItem('user', JSON.stringify(user))
     }
     
@@ -42,12 +43,15 @@ const signIn = () => {
                 
               <div className="space-y-4">
                 <label>
+
                   <input type="email"placeholder="Email"{...register('email', {required:true})} className='w-full rounded bg-[#333333] px-5 py-3.5 placeholder-[gray] outline-none focus:bg-[#454545];'/>
                 </label>
+                {errors.email?.type === 'required' && <span className='text-red-800 '>*Email is required</span>}
                 
 
                 <label>
                   <input type="password"placeholder="Password"{...register('password', {required: true})} className='w-full rounded bg-[#333333] mt-5 px-5 py-3.5 placeholder-[gray] outline-none focus:bg-[#454545];'/>
+                  {errors.email?.type === 'required' && <span className='text-red-800'>*Password is required</span>}
                   
                 </label>
               </div>
@@ -55,8 +59,6 @@ const signIn = () => {
             <ToastContainer/> 
               {Object.keys(errors).length !== 0 && (
                 <div className='error-container'>
-                  {errors.email?.type === 'required' && <span className='text-white'></span>}
-                  {errors.email?.type === 'required' && <span className='text-white '>Email is required</span>}
                 </div>
               )
               }
