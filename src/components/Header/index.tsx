@@ -24,7 +24,7 @@ const Header = (props: Props) => {
                         </Link>
                     ))}
                 </nav>
-                <div className="my-auto">
+                <div className='h-auto'>
                     <Search />
                 </div>
                 <div className="my-auto ml-56">

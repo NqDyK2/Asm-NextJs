@@ -10,7 +10,7 @@ const Layout = ({ children }: LayoutProps) => {
   return (
     <div className='bg-black' >
       <Header />
-      <div>
+      <div className='mt-40'>
         {children}
       </div>
       <Footer />
