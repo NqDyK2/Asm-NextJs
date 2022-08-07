@@ -65,7 +65,6 @@
   "films": [
     {
       "id": 507086, 
-      
       "name": "Jurassic World: Lãnh Địa",
       "overview": "Four years after Isla Nublar was destroyed, dinosaurs now live—and hunt—alongside humans all over the world. This fragile balance will reshape the future and determine, once and for all, whether human beings are to remain the apex predators on a planet they now share with history’s most fearsome creatures.",
       "cast": "Robert John Downey Ir,Darkly, Gothika, Zodiac",
@@ -74,7 +73,7 @@
       "banner_img":"https://photo-cms-nghenhinvietnam.zadn.vn/Uploaded/trunghieu/2022_06_12/UC7PLVWO25GSVAW2R5VTO6UZBU_RKFK.jpeg",
       "release_date": "2022-06-01",
       "title": "Jurassic World Dominion",
-      "video": false
+      "video": "https://www.youtube.com/embed/cXKtVllKvgk" 
       
     },
     {
@@ -88,7 +87,7 @@
       "banner_img":"https://xemphimviet.net/uploads/minions-su-troi-day-cua-gru_banner_.jpg?v=1657530955",
       "release_date": "2022-06-29",
       "title": "Minions: The Rise of Gru",
-      "video": false
+      "video": "https://www.youtube.com/embed/hJkpy8oGEGM"
      
     },
     {
@@ -103,7 +102,7 @@
       "banner_img":"https://i.imgur.com/7ojmRmT.jpg",
       "release_date": "2022-05-24",
       "title": "Top Gun: Maverick",
-      "video": false
+      "video": "https://www.youtube.com/embed/ZR99nOkEolM"
      
     },
     {
@@ -118,7 +117,7 @@
       "banner_img":"https://ghienxemphim.net/uploads/dien-thoai-den-the-black-phone_banner_.jpg?v=1656951160",
       "release_date": "2022-06-22",
       "title": "The Black Phone",
-      "video": false
+      "video": "https://www.youtube.com/embed/5FdSkHJW884"
      
     },
     {
@@ -146,7 +145,7 @@
       "banner_img":"https://xemphimviet.net/uploads/minions-su-troi-day-cua-gru_banner_.jpg?v=1657530955",
       "release_date": "2022-06-29",
       "title": "Minions: The Rise of Gru",
-      "video": false
+      "video": "https://www.youtube.com/embed/hJkpy8oGEGM"
       
     },
     {
@@ -161,7 +160,7 @@
       "banner_img":"https://i.imgur.com/7ojmRmT.jpg",
       "release_date": "2022-05-24",
       "title": "Top Gun: Maverick",
-      "video": false
+      "video": "https://www.youtube.com/embed/ZR99nOkEolM"
      
     },
     {
@@ -176,7 +175,7 @@
       "banner_img":"https://ghienxemphim.net/uploads/dien-thoai-den-the-black-phone_banner_.jpg?v=1656951160",
       "release_date": "2022-06-22",
       "title": "The Black Phone",
-      "video": false
+      "video": "https://www.youtube.com/embed/5FdSkHJW884"
       
     }
   ]
