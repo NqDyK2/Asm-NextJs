@@ -50,7 +50,7 @@ const signIn = () => {
                   <input type="password"placeholder="Password"{...register('password', {required: true})} className='w-full rounded bg-[#333333] mt-5 px-5 py-3.5 placeholder-[gray] outline-none focus:bg-[#454545];'/>
                 </label>
               </div>
-              <button type='submit' className='w-full rounded bg-[#e50914] mt-5 py-3 font-semibold'>Sign In</button>
+              <button type='submit' className='w-full rounded bg-[#e50914] text-white mt-5 py-3 font-semibold'>Sign In</button>
             <ToastContainer/> 
               {Object.keys(errors).length !== 0 && (
                 <div className='error-container'>
