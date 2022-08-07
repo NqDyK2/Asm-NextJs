@@ -8,12 +8,13 @@ import isEmpty from "validator/lib/isEmpty"
 
 interface Input{
   email: String,
-  password: String
+  password: String,
+  name: string,
 }
 
 const Signup = () => {
 
-  const {register, handleSubmit } = useForm<Input>()
+  const {register, handleSubmit, formState:{errors} } = useForm<Input>()
   const onSubmit:SubmitHandler<Input> = data => {
     console.log(data);
     SignUp(data)
@@ -37,14 +38,28 @@ const Signup = () => {
           <h1 className='text-center mb-5 text-white text-3xl'>Sign Up</h1>
           <div className="space-y-4">
             <label>
-              <input type="email"placeholder="Email"{...register('email')} className='w-full rounded bg-[#333333] px-5 py-3.5 placeholder-[gray] outline-none focus:bg-[#454545];'/>
+              <input type="email"placeholder="Name"{...register('name', {required: true})} className='w-full rounded bg-[#333333] mb-5 px-5 py-3.5 placeholder-[gray] outline-none focus:bg-[#454545];'/>
             </label>
+
+            <span>{errors.name?.type === 'required' && <span className='text-red-900 '>*Name is required</span>}</span>
+            {/* Validate */}
             <label>
-              <input type="password"placeholder="Password"{...register('password')} className='w-full rounded bg-[#333333] mt-5 px-5 py-3.5 placeholder-[gray] outline-none focus:bg-[#454545];'/>
+              <input type="email"placeholder="Email"{...register('email', {required: true})} className='w-full rounded bg-[#333333] px-5 py-3.5 placeholder-[gray] outline-none focus:bg-[#454545];'/>
             </label>
+            <span>{errors.email?.type === 'required' && <span className='text-red-900 '>*Email is required</span>}</span>
+            {/* Validate */}
+            <label>
+              <input type="password"placeholder="Password"{...register('password', {required: true})} className='w-full rounded bg-[#333333] mt-5 px-5 py-3.5 placeholder-[gray] outline-none focus:bg-[#454545];'/>
+            </label>
+            <span>{errors.password?.type === 'required' && <span className='text-red-900'>*Password is required</span>}</span>
+            {/* Validate */}
           </div>
           <button type='submit' className='w-full rounded bg-[#e50914] mt-5 py-3 font-semibold'>Sign In</button>
-
+          {Object.keys(errors).length !== 0 && (
+                <div className='error-container'>
+                </div>
+                )
+          }
 
 
           <div className="text-[gray] mt-3">
