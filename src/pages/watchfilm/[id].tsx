@@ -23,7 +23,6 @@ console.log(data.video);
   return (
    <div>
     <div>
-      {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/J5SPKIxBDGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
     <iframe width="100%" height="800px" src={data.video}  frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
     </div>
   <List10Film/>
