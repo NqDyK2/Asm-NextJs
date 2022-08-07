@@ -53,7 +53,7 @@
   "films": [
     {
       "id": 924482,
-      "original_title": "The Ledge",
+      "name": "The Ledge",
       "overview": "A rock climbing adventure between two friends turns into a terrifying nightmare. After Kelly captures the murder of her best friend on camera, she becomes the next target of a tight-knit group of friends who will stop at nothing to destroy the evidence and anyone in their way. Desperate for her safety, she begins a treacherous climb up a mountain cliff and her survival instincts are put to the test when she becomes trapped with the killers just 20 feet away.",
       "popularity": 1743.794,
       "poster_path": "https://www.themoviedb.org/t/p/w500/mKFT6Q7PjrRLYuPLfmH4WLCXOiD.jpg",
@@ -67,7 +67,7 @@
     {
       "id": 453395,
       "original_language": "en",
-      "original_title": "Doctor Strange in the Multiverse of Madness",
+      "name": "Doctor Strange in the Multiverse of Madness",
       "overview": "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",
       "popularity": 3117.506,
       "poster_path": "https://www.themoviedb.org/t/p/w500/9Gtg2DzBhmYamXBS1hKAhiwbBKS.jpg",
@@ -81,7 +81,7 @@
     {
       "id": 854467,
       "original_language": "en",
-      "original_title": "Indemnity",
+      "name": "Indemnity",
       "overview": "An ex-fireman with PTSD goes on the run when accused of a crime he doesn't even remember committing, leading him down a rabbit hole of conspiracy to the highest degree.",
       "popularity": 1782.861,
       "poster_path": "https://www.themoviedb.org/t/p/w500/tVbO8EAbegVtVkrl8wNhzoxS84N.jpg",
@@ -94,7 +94,7 @@
     },
     {
       "id": 728366,
-      "original_title": "Borrego",
+      "name": "Borrego",
       "overview": "A young botanist relocates to a small desert town to study an invasive plant species. While out on research, she comes to the aid of a downed plane only to find herself taken captive by an inexperienced drug mule who forces her to lead a trek across the sweltering desert to his drop. A local sheriff is drawn into the hunt as his rebellious daughter sets out to find the missing botanist, all the while being pursued by a local drug receiver.",
       "popularity": 1747.167,
       "poster_path": "https://phim.didibkk.com/wp-content/uploads/2022/01/kPzQtr5LTheO0mBodIeAXHgthYX.jpg",
@@ -109,7 +109,7 @@
     {
       "id": 718930,
       "original_language": "en",
-      "original_title": "Bullet Train",
+      "name": "Bullet Train",
       "overview": "Unlucky assassin Ladybug is determined to do his job peacefully after one too many gigs gone off the rails. Fate, however, may have other plans, as Ladybug's latest mission puts him on a collision course with lethal adversaries from around the globe—all with connected, yet conflicting, objectives—on the world's fastest train.",
       "popularity": 950.606,
       "poster_path": "https://posters-us.s3.us-west-2.amazonaws.com/CGVLOS/tVxDe01Zy3kZqaZRNiXFGDICdZk.jpg",
@@ -122,7 +122,7 @@
     },
     {
       "id": 725201,
-      "original_title": "The Gray Man",
+      "name": "The Gray Man",
       "overview": "When a shadowy CIA agent uncovers damning agency secrets, he's hunted across the globe by a sociopathic rogue operative who's put a bounty on his head.",
       "popularity": 3253.391,
       "poster_path": "https://www.themoviedb.org/t/p/w500/8cXbitsS6dWQ5gfMTZdorpAAzEH.jpg",
@@ -135,7 +135,7 @@
     },
     {
       "id": 961484,
-      "original_title": "Last Seen Alive",
+      "name": "Last Seen Alive",
       "overview": "After Will Spann's wife suddenly vanishes at a gas station, his desperate search to find her leads him down a dark path that forces him to run from authorities and take the law into his own hands.",
       "popularity": 1727.428,
       "poster_path": "https://www.themoviedb.org/t/p/original/qvqyDj34Uivokf4qIvK4bH0m0qF.jpg",
@@ -149,7 +149,7 @@
     {
       "id": 675353,
       "original_language": "en",
-      "original_title": "Sonic the Hedgehog 2",
+      "name": "Sonic the Hedgehog 2",
       "overview": "After settling in Green Hills, Sonic is eager to prove he has what it takes to be a true hero. His test comes when Dr. Robotnik returns, this time with a new partner, Knuckles, in search for an emerald that has the power to destroy civilizations. Sonic teams up with his own sidekick, Tails, and together they embark on a globe-trotting journey to find the emerald before it falls into the wrong hands.",
       "popularity": 1504.812,
       "poster_path": "https://www.themoviedb.org/t/p/original/6DrHO1jr3qVrViUO6s6kFiAGM7.jpg",
@@ -163,7 +163,7 @@
     {
       "id": 823625,
       "original_language": "en",
-      "original_title": "Blacklight",
+      "name": "Blacklight",
       "overview": "Travis Block is a shadowy Government agent who specializes in removing operatives whose covers have been exposed. He then has to uncover a deadly conspiracy within his own ranks that reaches the highest echelons of power.",
       "popularity": 368.627,
       "poster_path": "https://www.themoviedb.org/t/p/w500/bv9dy8mnwftdY2j6gG39gCfSFpV.jpg",
@@ -176,7 +176,7 @@
     },
     {
       "id": 629015,
-      "original_title": "Shut In",
+      "name": "Shut In",
       "overview": "A young single mother is held captive along with her two children by a violent ex and must plot their escape before it’s too late.",
       "popularity": 1468.198,
       "poster_path": "https://www.themoviedb.org/t/p/w500/b5ug4LyLQFeR6azAJyIPBQz5ur9.jpg",
@@ -189,7 +189,7 @@
     },
     {
       "id": 616037,
-      "original_title": "Thor: Love and Thunder",
+      "name": "Thor: Love and Thunder",
       "overview": "After his retirement is interrupted by Gorr the God Butcher, a galactic killer who seeks the extinction of the gods, Thor enlists the help of King Valkyrie, Korg, and ex-girlfriend Jane Foster, who now inexplicably wields Mjolnir as the Mighty Thor. Together they embark upon a harrowing cosmic adventure to uncover the mystery of the God Butcher’s vengeance and stop him before it’s too late.",
       "popularity": 12235.8,
       "poster_path": "https://image.tmdb.org/t/p/w185/pIkRyD18kl4FhoCNQuWxWu5cBLM.jpg",
