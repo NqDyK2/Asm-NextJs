@@ -31,7 +31,7 @@ const NavAdmin = (props: Props) => {
                 </div>
               </li>
             </Link>
-            <Link href={"/admin/listfilm"}>
+            <Link href={"/admin/films"}>
               <li className="text-slate-50	 flex w-full justify-between text-gray-600 hover:text-gray-300 hover:bg-indigo-800 cursor-pointer items-center px-8 py-3">
                 <div className="flex items-center">
                   <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-puzzle" width={18} height={18} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">

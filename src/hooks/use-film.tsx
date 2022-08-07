@@ -2,21 +2,23 @@ import useSWR from "swr";
 import {addFilm, deleteFilm} from '../api/film'
 
 const useFilms = () => {
-    const { data, error } = useSWR("/films")
-    const create = async (item) => {
-        const product = await add(item);
-        mutate([...data, product]);
+    const { data, error, mutate } = useSWR("/films")
+    const create = async (item:any) => {
+        const film = await addFilm(item);
+        mutate([...data, film]);
     };
     // update
     // delete
-    const remove = async (id) => {
-        await removeItem(id);
-        const newProducts = data.filter((item) => item.id != id);
+    const remove = async (id:number) => {
+        await deleteFilm(id);
+        const newProducts = data.filter((item:any) => item.id != id);
         mutate(newProducts);
     };
     return{
         data,
-        error
+        error,
+        create,
+        remove
     }
 }
 
