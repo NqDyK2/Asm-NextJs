@@ -15,8 +15,8 @@ const ProductPage = (props: ProductProps ) => {
 const router = useRouter()
 const {id} = router.query
 const {data, error} = useSWR(id ? `/films/${id}` : null)
-if(!data) <div>loading...</div>
-if(error) <div> error</div>
+if(!data) return <div>loading...</div>
+if(error) return <div> error</div>
 
 
   return (
@@ -26,7 +26,7 @@ if(error) <div> error</div>
 
         <div className={styles.content} >
           <div className={styles.item}>
-          <img src={data?.poster_path} alt="" width="100%" />
+          <img src={data?.banner_img} alt="" width="100%" />
             <div className={styles.content_item}>
               <h2>{data?.name}</h2>
               <div className={styles.deltal}>
