@@ -1,5 +1,11 @@
 .footer{
     @apply text-center lg:text-left text-white;
     background: var(--primary);
-    
+    margin-top: 40px;
 }
+.logo {
+    color: #fff;  
+    margin: 0; 
+    padding: 0; 
+
+  }
