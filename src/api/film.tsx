@@ -3,6 +3,10 @@ export const listFilm = () => {
     const url = `/films`
     return instance.get(url)
 }
+export const get1 = (id:number) =>{
+    const url = `/films/${id}`
+    return instance.get(url)
+}
 export const addFilm = (film:any) => {
     const url = `/films`
     return instance.post(url, film)

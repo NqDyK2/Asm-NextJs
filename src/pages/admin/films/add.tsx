@@ -1,6 +1,7 @@
 import LayoutAdmin from '@/components/Layouts/admin'
 import useFilms from '@/hooks/use-film'
 import { NextPageWithLayout } from '@/models/layouts'
+import { useRouter } from 'next/router'
 import React from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 
@@ -15,11 +16,12 @@ interface Input {
 
 const CreateFilm = (props: NextPageWithLayout) => {
     const { create } = useFilms()
+    const router = useRouter()
     const { register, handleSubmit, formState: { errors } } = useForm<Input>()
     const onSubmit: SubmitHandler<Input> = data => {
         create(data)
         console.log("data", data);
-
+        router.push(`/admin/films`)
     }
     return (
         <div>

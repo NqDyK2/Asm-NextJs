@@ -3,32 +3,55 @@
 @tailwind utilities;
 
 :root {
-    --primary: #1b1a1a;
-    --light: #F3F3F3;
-    --dark: 	#686868;
-    --height-panigation: 6px;
-    --width-panigation:18px;
-    /* background-color: #1d1c1c; */
-  }
-  .swiper-button-prev,
-  .swiper-button-next{
-    color: var(--light) !important;
-    }
-  .swiper-button-prev::after,
-  .swiper-button-next::after{
-    font-size: 30px !important;
-    font-weight: bolder;
-  }
+  --primary: #1b1a1a;
+  --light: #F3F3F3;
+  --dark: #686868;
+  --height-panigation: 6px;
+  --width-panigation: 18px;
+  /* background-color: #1d1c1c; */
+}
 
-  .swiper-pagination-bullet{
-    border-radius: 0 !important;  
-    width: var(--width-panigation) !important;
-    height: var(--height-panigation) !important;
-  }
-  .swiper-pagination-bullet-active{
-    background: var(--light) !important;
-    border-radius: 0 !important;
-    width: var(--width-panigation) !important;
-    height: var(--height-panigation) !important;
-  }
-  
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--light) !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 30px !important;
+  font-weight: bolder;
+}
+
+.swiper-pagination-bullet {
+  border-radius: 0 !important;
+  width: var(--width-panigation) !important;
+  height: var(--height-panigation) !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--light) !important;
+  border-radius: 0 !important;
+  width: var(--width-panigation) !important;
+  height: var(--height-panigation) !important;
+}
+
+/* ::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-corner {
+  background: 0 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to left, #7347c1, #0674ec);
+  border: 0 transparent;
+  border-radius: 31px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eff1f5;
+  border: 0 transparent;
+  border: 50px;
+} */

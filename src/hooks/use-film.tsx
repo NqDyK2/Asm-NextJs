@@ -1,5 +1,5 @@
 import useSWR from "swr";
-import {addFilm, deleteFilm} from '../api/film'
+import {addFilm, deleteFilm, get1, updateFilm} from '../api/film'
 
 const useFilms = () => {
     const { data, error, mutate } = useSWR("/films")
@@ -7,18 +7,28 @@ const useFilms = () => {
         const film = await addFilm(item);
         mutate([...data, film]);
     };
+    const getOne = async(item:any) => {
+        const film = await get1(item)
+        mutate([...data,film])
+    }
     // update
+    const update = async ( films:any)=>{
+        await updateFilm(films)
+        mutate (data.map((item:{id: any , name: string}) => item.id === films.id ? films : item))
+    }
     // delete
-    const remove = async (id:number) => {
+    const removeFilms = async (id:number) => {
         await deleteFilm(id);
-        const newProducts = data.filter((item:any) => item.id != id);
-        mutate(newProducts);
+        const newFilms = data.filter((item:any) => item.id != id);
+        mutate(newFilms);
     };
     return{
         data,
         error,
+        getOne,
+        update,
         create,
-        remove
+        removeFilms
     }
 }
 
