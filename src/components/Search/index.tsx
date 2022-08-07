@@ -26,10 +26,10 @@ const Search = (props: Props) => {
     return (
         <>
 
-            <form className='-ml-72' onSubmit={handleSearchSubmit}>
+            <form className='-ml-72 static' onSubmit={handleSearchSubmit}>
                 <label htmlFor="default-search" className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
                 <div className="relative">
-                    <div className="rounded shadow-md my-2 relative pin-t pin-l">
+                    <div className="rounded bg-white shadow-md my-2 relative pin-t pin-l">
                         <ul className='list-reset'>
                             <li>
                                 <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -38,9 +38,14 @@ const Search = (props: Props) => {
                                 <input onChange={handleSearchChange} type="search" id="default-search" className="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Mockups, Logos..." required />
                             </li>
                             {filmsSearch?.map((item: any, index: any) => (
-                                <li key={index}><p className="text-white relative hover:bg-white hover:text-red-500 cursor-pointer">
-                                    {item.title}
-                                </p></li>
+                                <li className='' key={index}>
+                                    <Link href={`/film/${item.id}`}>
+                                        <div className='grid grid-cols-2 gap-10 cursor-pointer text-black dark:text-gray-400 text-sm dark:hover:bg-gray-600 hover:text-black leading-3 tracking-normal py-3 hover:bg-gray-100 px-3 font-normal'>
+                                            <p className="my-auto ml-5 w-96">{item.title}</p>
+                                            <img src={item.poster_path} className="w-10 h-10 ml-56 object-cover rounded-full bg-[#f7f7f7]" alt="" layout="fill" />
+                                        </div>
+                                    </Link>
+                                </li>
                             ))}
                         </ul>
                     </div>
