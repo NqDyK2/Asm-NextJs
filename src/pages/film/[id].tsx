@@ -39,7 +39,7 @@ if(error) return <div> error</div>
               </div>
               <div className={styles.deltail_play}>
                 <div className={styles.play}>
-                  <a href=""><i className="fa-solid fa-play" />Phát </a>
+                  <a href={`/watchfilm/${id}`}><i className="fa-solid fa-play" />Phát </a>
                 </div>
                 <div className={styles.deltai_film}>
                   <a href=""> Chi tiết phim </a>
