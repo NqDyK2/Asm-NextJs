@@ -4,7 +4,6 @@ import Image from 'next/image'
 
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { SignUp } from '../../api/auth'
-import isEmpty from "validator/lib/isEmpty"
 import { useRouter } from 'next/router'
 
 
@@ -16,7 +15,7 @@ interface Input {
 
 const Signup = () => {
 
-  const { register, handleSubmit } = useForm<Input>()
+  const { register, handleSubmit, formState: {errors} } = useForm<Input>()
   const router = useRouter()
   const onSubmit: SubmitHandler<Input> = data => {
     console.log(data);
@@ -42,7 +41,7 @@ const Signup = () => {
           <h1 className='text-center mb-5 text-white text-3xl'>Sign Up</h1>
           <div className="space-y-4">
             <label>
-              <input type="email"placeholder="Name"{...register('name', {required: true})} className='w-full rounded bg-[#333333] mb-5 px-5 py-3.5 placeholder-[gray] outline-none focus:bg-[#454545];'/>
+              <input type="text"placeholder="Name"{...register('name', {required: true})} className='w-full rounded bg-[#333333] mb-5 px-5 py-3.5 placeholder-[gray] outline-none focus:bg-[#454545];'/>
             </label>
 
             <span>{errors.name?.type === 'required' && <span className='text-red-900 '>*Name is required</span>}</span>
@@ -58,14 +57,12 @@ const Signup = () => {
             <span>{errors.password?.type === 'required' && <span className='text-red-900'>*Password is required</span>}</span>
             {/* Validate */}
           </div>
-          <button type='submit' className='w-full rounded bg-[#e50914] mt-5 py-3 font-semibold'>Sign In</button>
+          <button type='submit' className='w-full rounded bg-[#e50914] mt-5 py-3 font-semibold'>Sign Up</button>
           {Object.keys(errors).length !== 0 && (
                 <div className='error-container'>
                 </div>
-                )
+          )
           }
-
-
           <div className="text-[gray] mt-3">
           New to Netflix?{''}
           <button type="submit"className="ml-3 text-white hover:underline">
@@ -73,10 +70,6 @@ const Signup = () => {
           </button>
 
         </div>
-        <button type='submit' className='w-full rounded bg-[#e50914] mt-5 py-3 font-semibold text-white'>Sign Up</button>
-
-
-
 
       </form>
     </div>
