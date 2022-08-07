@@ -29,10 +29,10 @@ const List10Film = (props: Props) => {
                 }
                 modules={[Pagination, Navigation]}
                 className={styles.mySwiper}
-            >
-                {films.slice(0,9).map((item: any , index:any) => {
+
+                {films.slice(0,10).map((item: any , index:any) => {
                 
-             return <SwiperSlide className={styles.Swiper_slide} key={index} >
+                return <SwiperSlide className={styles.Swiper_slide} key={index}>
                     <div className={styles.item_number}>
                         <div className={styles.number}>
                             <span>{index+1}</span>
