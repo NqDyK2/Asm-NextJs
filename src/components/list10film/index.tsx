@@ -14,7 +14,6 @@ const List10Film = (props: Props) => {
     const {data: films, error} = useFilms()
     if(!films ) return <div> loading...</div>
     if(error) return <div>error</div>
-    console.log("film",films);
     
     return (
         <div>
@@ -31,13 +30,13 @@ const List10Film = (props: Props) => {
                 modules={[Pagination, Navigation]}
                 className={styles.mySwiper}
             >
-                {films.slice(0,10).map((item: any , index:any) => {
+                {films.slice(0,9).map((item: any , index:any) => {
                 
-             return <SwiperSlide className={styles.Swiper_slide} key={index}>
+             return <SwiperSlide className={styles.Swiper_slide} key={index} >
                     <div className={styles.item_number}>
-                        {/* <div className={styles.number}>
-                            <span>1</span>
-                        </div> */}
+                        <div className={styles.number}>
+                            <span>{index+1}</span>
+                        </div>
                         <div className={styles.item}>
                             <Link href={`film/${item.id}`}>
                                 <img src= {item.poster_path} alt='#' />
@@ -47,8 +46,6 @@ const List10Film = (props: Props) => {
                 </SwiperSlide>
                 
                 })}
-                
-
                 <SwiperSlide className={styles.Swiper_slide}>
                     <img src="https://i.ytimg.com/vi/TFJwUwnShnA/mqdefault.jpg" alt='' />
                 </SwiperSlide>

@@ -13,8 +13,8 @@ const AllFilm = (props: Props) => {
       <div className='grid grid-cols-4 gap-5 max-w-screen-lg	mx-auto my-5 p-auto'>
         {films.map((item: any, index: any) => {
           // eslint-disable-next-line react/jsx-key
-          return <Link href={`/film/${item.id}`}>
-            <div key={item.id} className='w-56 cursor-pointer	'>
+          return <Link href={`/film/${item.id}`} key={item.id}>
+            <div className='w-56 cursor-pointer	'>
               <div className='p-auto'><img src={item.poster_path} alt="" width={"215px"} /></div>
               <div>
                 <h6 className='text-teal-500 font-medium text-sm truncate py-2 hover:text-yellow-500'>{item.name}</h6>
